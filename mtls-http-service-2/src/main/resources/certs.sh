@@ -1,7 +1,7 @@
 CN_NAME=http-service-2
 HOSTNAME=localhost-1
 PASSWORD=password
-EXEC_FOLDER=/home/aleksei/mtls-demo/mtls-http-service-2/src/main/resources
+EXEC_FOLDER=/home/$USER/mtls-demo/mtls-http-service-2/src/main/resources
 rm $EXEC_FOLDER/ca-* $EXEC_FOLDER/cert-* $EXEC_FOLDER/*.jks
 
 openssl req -new -newkey rsa:4096 -days 365 -x509 -subj "/CN=$CN_NAME" -keyout $EXEC_FOLDER/ca-key -out $EXEC_FOLDER/ca-cert -nodes

@@ -58,6 +58,7 @@ public class RestController {
                     .loadTrustMaterial(trustStore.getFile(), trustStorePassword.toCharArray()).build();
         }  catch (Exception e) {
             logger.info("bad request or properties");
+            logger.error(e.getMessage());
             responseEntity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             return responseEntity;
         }

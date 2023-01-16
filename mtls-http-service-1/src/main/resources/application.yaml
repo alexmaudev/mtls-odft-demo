@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  ssl:
+    enabled: true
+    key-password: password
+    key-store: "/home/aleksei/mtls-demo/mtls-http-service-1/src/main/resources/server.keystore.jks"
+    mtls-key-store: "classpath:server.keystore.jks"
+    key-store-password: password
+    key-store-type: JKS
+    trust-store: "/home/aleksei/mtls-demo/mtls-http-service-1/src/main/resources/server.truststore.jks"
+    mtls-trust-store: "classpath:server.truststore.jks"
+    trust-store-password: password
+    trust-store-type: JKS
+    client-auth: need
